@@ -114,6 +114,10 @@ The result tells you the changes you've mad that you haven't yet staged..
 
 
 ### Committing Your Changes.
+* Important point in this section is, anything that is still unstaged - you have created or modified and you haven't run `git add` on since you edited them - won't go into this commit. They will stay as modified files on your disk.
+
+The command for committing changes is `git commit`
+
 
 
 

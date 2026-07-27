@@ -9,12 +9,12 @@
     Committed means that the data is safely stored in your local database.
 
 And this the components or the three main sections of a Git project:
-* *Working Directory* 
-    - Is a single checkout of one version of the project.
-* *Staging Area*
-    - Is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
-* *.git directory*
-    - Is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a respository from another computer.
+#### Working Directory:
+- Is a single checkout of one version of the project.
+#### Staging Area:
+- Is a file, generally contained in your Git directory, that stores information about what will go into your next commit.
+#### .git directory:
+- Is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a respository from another computer.
     
 The Workflow is this: 
 1. You modify files in your working tree.

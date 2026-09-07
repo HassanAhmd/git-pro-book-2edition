@@ -43,5 +43,3 @@ And stored in `~/.gitconfig` or `~/.config/git/config`(Linux/macOS) and `%USERPR
 
 3. **Local** This are repository-specific settings that apply *only to the current project* (the `.git` directory you are currently working in). Stored in the `config` file located inside the hidden `.git` directory of the repository. `<repository_root>/.git/config`
 This file is automatically created when you run `git init` or `git clone`.
-
-

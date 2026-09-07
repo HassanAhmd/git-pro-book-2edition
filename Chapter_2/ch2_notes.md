@@ -21,13 +21,14 @@ Things you have to know at the end of this chapter:
 * This creates new sub directory name `.git` that contains all of your necessary repository files-a Git repo skeleton. 
 At this point nothing of your project is tracked.
 
-If you want to start version-controlling existing files, use `git add` commands that specify the files you want to track, follewed by a `git commit`
+If you want to start version-controlling existing files, use `git add` commands that specify the files you want to track, follewed by a `git commit` 
 
 ```Shell
 $ git add *.c
 $ git add LICENSE
 $ git commit -m 'Initial project version'
 ```
+
 
 **Cloning a repo using `git clone`**
 If you want to contribute a project you need to run this command to get a full copy, and every version of the project. `git clone <url>`
@@ -128,4 +129,29 @@ For the sake of time, you can completely pass the staging area, and letting git 
 * But if you want the file to stay in your working directory, but want to stop from git tracking that file, you can run `git rm --cached <filename>`.
 
 
+### Viewing The Commit History:
+  When you want to see the commit history of your project, or the repo you cloned, you can run the command `git log`.
+  * This command has a lot of options:
+   - `git log  -p or --patch` show the batch of instroduced in each commit.
+   - `git log --stat` show the number of insertions and deletions in each commit.
+   - `git log --pretty=online` show each commit on a single line.
+  
+* *Author* is the person who originally wrote the code.
+* *Committer* is the person who last applied the work.
 
+
+
+### Undoing Things:
+* How to undo your commit messages?
+----
+
+#### Unstaging a Staged File:
+* If you want to unstage or uncommit, a file thta you already staged, you ran `git restore --stage <file>`,
+But if you push that staged file and force it to unstage, and then force it to puch, that might couse conflict to you and you collaborators.
+* If you run `git reset HEAD` it will unstage all the staged files.
+
+### Git Basics - Working with `Remotes`: (Remote Management Skills)
+
+>***Note:*** The word remote repository can be on your local machine, on the same host you are. The word remote does not necessarily imply that the repo is somewhere else on the network or internet, only that is somewhere else. 
+
+# Fetching and Pulling remotes:

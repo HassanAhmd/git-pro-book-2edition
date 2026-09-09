@@ -154,4 +154,22 @@ But if you push that staged file and force it to unstage, and then force it to p
 
 >***Note:*** The word remote repository can be on your local machine, on the same host you are. The word remote does not necessarily imply that the repo is somewhere else on the network or internet, only that is somewhere else. 
 
-# Fetching and Pulling remotes:
+#### Fetching and Pulling remotes:
+* Command `git fetch <remote>`
+The command goes out to that remote project and pulls down all the data frmo that project that you don't have yet.
+
+#### Pushing remotes
+When you want to share your project:
+`git push <remote> <branch>`
+
+#### Renaming and Removing Remotes
+`git remote rename <from this> <to this>`
+this command changes all your remote-tracking branch names. `Hassan/main` is now `Ahmed/main`
+
+### Removing a remote
+`git remote remove Hassan`
+
+
+### Tagging:
+
+3f6b1e11c2e

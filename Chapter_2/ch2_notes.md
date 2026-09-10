@@ -171,5 +171,29 @@ this command changes all your remote-tracking branch names. `Hassan/main` is now
 
 
 ### Tagging:
+This is used to mark specific point in a repo history as being important. Specially people use it to mark release points `v1.0, v2.0`
+* Two types of Tags:
+    1. Lightweight
+    > Is used as temporary and don't want to keep other information.
+```sh
+    $ git tag v1.4-lw
+    $ git tag
+    v0.1
+    v1.3
+    v1.4
+    v1.4-lw
+```
 
-3f6b1e11c2e
+    1. Annotated. 
+    > Full objects in git database and contain tagger name, email, and date, have a tagging message 
+```sh
+  $ git tag -a v1.4 -m "my version 1.4"
+  $ git tag
+  v0.1 
+  v1.3 
+  v1.4 
+```
+to list tags use this command `git tag`
+and to create tags
+
+### GIT Branching

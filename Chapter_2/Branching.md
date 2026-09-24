@@ -1,6 +1,6 @@
 ## Branching:
 A `branch` is a small movable pointer that refers to a commit.
-
+![Creating a new branch](image-2.png)
 * Branching means creating a seperate line of development from the main line.
 
 * For example you  need to add a feature to your project:
@@ -14,7 +14,7 @@ A `branch` is a small movable pointer that refers to a commit.
 → You can experiment safely
 → You can work on several tasks independently
 → You can later combine the work through mergin.
-
+![Different commits belonging to different branches](image-3.png)
 
 * To create a new branch
 ```sh
@@ -53,3 +53,37 @@ And if you already have a branch but not switch to it yet,
 
 ## Basic Branching and Merching:
 
+![Creating a branch for `hotfix`](image-4.png)
+You can run your tests, make sure the the `hotfix` is what is you want, and finally merge the `hotfix` back to your `master` branch to deploy to production
+
+```shell
+  $ git checkout master
+  git merge fix
+```
+
+So now the master pointer is pointing to the commit that the `hotfix` branch is pointing to previously
+![Merching branches to the main](image-5.png)
+
+Now you can simpley delete it, because you no longer need it
+`git branch -d hotfix`
+
+* Now you can switch back for example, to your `iss53` branch and continue working on it.
+  
+![Work continues on `iss53`](image-6.png)
+
+### Basic Merging
+If you've decided that your `iss53` work is complete and ready to be merged into your `master` branch. You will merge your `iss53` branch into `master` much like the `hotfix` merging.
+*All you have to do is check out te branch you wish to merge into and then run `git merge` command.*
+
+![Merging iss53 into master](image-7.png)
+→ In this case, your development history has diverged from some older point. Because the commit on the branch you're on isn't a direct ancestor of the branch you're merging in.
+Git has to do some work. In this case, git does a simple `Three-way merge`, using the two snapshots pointed to by the branch and the ancestor of the two
+![Three snapshots used in a typical merge](image-8.png)
+
+→ Instead of just moving the branch pointer forward, *Git creates a new snapshot that result from this three-way merge and automatically creates a new commit that points to it.* This is referred to as a `merge commit`, and is special in that is has more than one parent.
+
+![A merge commit](image-9.png)
+Now that you work is merged in, you no further need for the `iss53` branch.
+
+
+### Basic Merge Conflicts
